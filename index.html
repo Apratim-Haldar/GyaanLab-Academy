@@ -15,13 +15,14 @@
   <!-- MDB CSS-->
   <link rel="stylesheet" href="css/mdb.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
   <div class="navbar">
-    <div class="logo"> 
+    <div class="logo">
       <img src="logo.jpg" alt="Logo" />
       <div class="header">GyaanLab</div>
     </div>
@@ -47,6 +48,47 @@
         </button>
       </div>
     </div>
+    <div class="ham" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+          width="40" height="40" viewBox="0 0 24 24" style="fill:#FFFFFF;">
+          <path
+            d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z">
+          </path>
+        </svg></a>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="close" onclick="hideSidebar()">
+      <a href = "#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50"
+        style="fill:#FFFFFF;">
+        <path
+          d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z">
+        </path>
+      </svg>
+      </a>
+    </div>
+    <div class="menu-item-sidebar home">Home</div>
+    <div class="menu-item-sidebar courses">Courses</div>
+    <div class="menu-item-sidebar EntranceExams">Entrance Exams</div>
+    <div class="menu-item-sidebar about">About us</div>
+    <div class="contact">
+      <div class="contactus">Contact us:</div>
+      <div class="phn">+91 9294792474</div>
+    </div>
+    <div class="buttons">
+      <div class="button1 button">
+        <button type="button" class="btn btn-primary fee-structure">
+          <b style="font-size: 15px" ;>Fee Structure</b>
+        </button>
+      </div>
+      <div class="button2 button">
+        <button type="button" class="btn btn-primary sign-in">
+          <b style="font-size: 15p"> Sign in</b>
+        </button>
+      </div>
+    </div>
+  </div>
+
   </div>
   <div class="title">
     <div class="intro">
@@ -284,12 +326,18 @@
   <div class="enquire">
     <div class="box">
       <h1> Enquire Now </h1>
-      <div style="width: 20%; height: 100%; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 200px; border-radius: 5px; border: 1px #A2A2A2 solid; justify-content: left; align-items: center; gap: 10px; display: inline-flex">
-        <div style="color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 20.80px; word-wrap: break-word">Name: </div>
-    </div>
-    <div style="width: 20%; height: 100%; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 200px; border-radius: 5px; border: 1px #A2A2A2 solid; justify-content: left; align-items: center; gap: 10px; display: inline-flex">
-      <div style="color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 20.80px; word-wrap: break-word">Contact no: </div>
-    </div>
+      <div
+        style="width: 20%; height: 100%; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 200px; border-radius: 5px; border: 1px #A2A2A2 solid; justify-content: left; align-items: center; gap: 10px; display: inline-flex">
+        <div
+          style="color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 20.80px; word-wrap: break-word">
+          Name: </div>
+      </div>
+      <div
+        style="width: 20%; height: 100%; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 200px; border-radius: 5px; border: 1px #A2A2A2 solid; justify-content: left; align-items: center; gap: 10px; display: inline-flex">
+        <div
+          style="color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 20.80px; word-wrap: break-word">
+          Contact no: </div>
+      </div>
       <button type="button" class="btn btn-primary submit"><b style="font-size: 15px">Submit</b>
       </button>
     </div>
@@ -300,45 +348,81 @@
       <div class="social">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-            <path d="M15.1316 1.94312H6.84281C4.16822 1.94312 2 4.1259 2 6.81846V15.1629C2 17.8555 4.16822 20.0382 6.84281 20.0382H15.1316C17.8062 20.0382 19.9744 17.8555 19.9744 15.1629V6.81846C19.9744 4.1259 17.8062 1.94312 15.1316 1.94312Z" stroke="#FF9700" stroke-width="2.78847" stroke-miterlimit="10"/>
-            <path d="M10.9871 15.3587C13.3833 15.3587 15.3258 13.4031 15.3258 10.9909C15.3258 8.57858 13.3833 6.62305 10.9871 6.62305C8.59092 6.62305 6.64844 8.57858 6.64844 10.9909C6.64844 13.4031 8.59092 15.3587 10.9871 15.3587Z" stroke="#FF9700" stroke-width="2.78847" stroke-miterlimit="10"/>
-            <path d="M16.2556 6.6229C16.7691 6.6229 17.1854 6.20386 17.1854 5.68694C17.1854 5.17002 16.7691 4.75098 16.2556 4.75098C15.7422 4.75098 15.3259 5.17002 15.3259 5.68694C15.3259 6.20386 15.7422 6.6229 16.2556 6.6229Z" fill="#FF9700"/>
+            <path
+              d="M15.1316 1.94312H6.84281C4.16822 1.94312 2 4.1259 2 6.81846V15.1629C2 17.8555 4.16822 20.0382 6.84281 20.0382H15.1316C17.8062 20.0382 19.9744 17.8555 19.9744 15.1629V6.81846C19.9744 4.1259 17.8062 1.94312 15.1316 1.94312Z"
+              stroke="#FF9700" stroke-width="2.78847" stroke-miterlimit="10" />
+            <path
+              d="M10.9871 15.3587C13.3833 15.3587 15.3258 13.4031 15.3258 10.9909C15.3258 8.57858 13.3833 6.62305 10.9871 6.62305C8.59092 6.62305 6.64844 8.57858 6.64844 10.9909C6.64844 13.4031 8.59092 15.3587 10.9871 15.3587Z"
+              stroke="#FF9700" stroke-width="2.78847" stroke-miterlimit="10" />
+            <path
+              d="M16.2556 6.6229C16.7691 6.6229 17.1854 6.20386 17.1854 5.68694C17.1854 5.17002 16.7691 4.75098 16.2556 4.75098C15.7422 4.75098 15.3259 5.17002 15.3259 5.68694C15.3259 6.20386 15.7422 6.6229 16.2556 6.6229Z"
+              fill="#FF9700" />
           </svg>
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-            <path d="M16.0621 0.737305H18.2263V5.48316H16.1227C14.2422 5.48316 12.7177 6.35222 12.7177 7.42427V7.43121V7.43086V7.80266H16.8441V11.7671H12.7177V18.8324H4.39284V11.7671H0.251953V7.80262H4.3928V7.43252V7.43238C4.3928 3.75005 9.60745 0.762044 16.0566 0.737358L16.0607 0.737322L16.0621 0.737305ZM16.7836 1.5598H16.0621C10.411 1.59232 5.84997 4.2074 5.83559 7.43171V8.62512H1.6948V10.9446H5.83556V18.0099H11.2749V10.9446H15.4013V8.62514H11.2749V7.43252V7.42428C11.2749 5.89798 13.4453 4.66066 16.1227 4.66066H16.7864L16.7836 1.5598Z" fill="#FF9700"/>
+            <path
+              d="M16.0621 0.737305H18.2263V5.48316H16.1227C14.2422 5.48316 12.7177 6.35222 12.7177 7.42427V7.43121V7.43086V7.80266H16.8441V11.7671H12.7177V18.8324H4.39284V11.7671H0.251953V7.80262H4.3928V7.43252V7.43238C4.3928 3.75005 9.60745 0.762044 16.0566 0.737358L16.0607 0.737322L16.0621 0.737305ZM16.7836 1.5598H16.0621C10.411 1.59232 5.84997 4.2074 5.83559 7.43171V8.62512H1.6948V10.9446H5.83556V18.0099H11.2749V10.9446H15.4013V8.62514H11.2749V7.43252V7.42428C11.2749 5.89798 13.4453 4.66066 16.1227 4.66066H16.7864L16.7836 1.5598Z"
+              fill="#FF9700" />
           </svg>
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
-            <path d="M18.9485 1.98769C18.9485 1.98769 18 2.75777 16.669 2.89638C16.669 2.89638 14.573 0.539911 11.5744 2.58836C10.2281 3.54326 10.1057 5.56092 10.3352 6.28479C10.3352 6.28479 6.26564 6.60823 2.71626 2.41895C2.71626 2.41895 1.12517 5.19127 3.75658 7.40913C3.75658 7.40913 2.97883 7.53233 2.23952 6.91629C2.23952 6.91629 1.89008 9.78102 5.07228 10.5819C5.07228 10.5819 4.85811 10.9516 3.57299 10.5819C3.57299 10.5819 3.78717 12.923 6.81637 13.2618C6.81637 13.2618 5.1799 14.956 1.50024 14.7404C1.50024 14.7404 7.58135 19.3301 14.1599 13.7855C17.8317 10.6435 17.7093 6.11542 17.6481 5.43775C17.6481 5.43775 19.0981 4.32882 19.4746 3.62033C19.4746 3.62033 18.3518 3.98997 17.4339 3.98997C17.4339 3.9899 18.6578 3.34302 18.9485 1.98769Z" stroke="#FF9700" stroke-width="2.69725" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path
+              d="M18.9485 1.98769C18.9485 1.98769 18 2.75777 16.669 2.89638C16.669 2.89638 14.573 0.539911 11.5744 2.58836C10.2281 3.54326 10.1057 5.56092 10.3352 6.28479C10.3352 6.28479 6.26564 6.60823 2.71626 2.41895C2.71626 2.41895 1.12517 5.19127 3.75658 7.40913C3.75658 7.40913 2.97883 7.53233 2.23952 6.91629C2.23952 6.91629 1.89008 9.78102 5.07228 10.5819C5.07228 10.5819 4.85811 10.9516 3.57299 10.5819C3.57299 10.5819 3.78717 12.923 6.81637 13.2618C6.81637 13.2618 5.1799 14.956 1.50024 14.7404C1.50024 14.7404 7.58135 19.3301 14.1599 13.7855C17.8317 10.6435 17.7093 6.11542 17.6481 5.43775C17.6481 5.43775 19.0981 4.32882 19.4746 3.62033C19.4746 3.62033 18.3518 3.98997 17.4339 3.98997C17.4339 3.9899 18.6578 3.34302 18.9485 1.98769Z"
+              stroke="#FF9700" stroke-width="2.69725" stroke-miterlimit="10" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
-            <path d="M7.17139 5.62964H10.7239V7.50471H10.7753C11.2695 6.59098 12.479 5.62964 14.2828 5.62964C18.0331 5.62964 18.7264 8.03364 18.7264 11.161V17.5307H15.0223V11.8843C15.0223 10.5381 14.9954 8.80457 13.0965 8.80457C11.1681 8.80457 10.8728 10.271 10.8728 11.7864V17.5307H7.17139V5.62964Z" fill="#FF9700"/>
-            <path d="M0.751953 5.62964H4.60361V17.5307H0.751953V5.62964Z" fill="#FF9700"/>
-            <path d="M4.60361 2.32384C4.60361 3.41873 3.74084 4.30734 2.67778 4.30734C1.61472 4.30734 0.751953 3.41873 0.751953 2.32384C0.751953 1.22894 1.61472 0.340332 2.67778 0.340332C3.74084 0.340332 4.60361 1.22894 4.60361 2.32384Z" fill="#FF9700"/>
+            <path
+              d="M7.17139 5.62964H10.7239V7.50471H10.7753C11.2695 6.59098 12.479 5.62964 14.2828 5.62964C18.0331 5.62964 18.7264 8.03364 18.7264 11.161V17.5307H15.0223V11.8843C15.0223 10.5381 14.9954 8.80457 13.0965 8.80457C11.1681 8.80457 10.8728 10.271 10.8728 11.7864V17.5307H7.17139V5.62964Z"
+              fill="#FF9700" />
+            <path d="M0.751953 5.62964H4.60361V17.5307H0.751953V5.62964Z" fill="#FF9700" />
+            <path
+              d="M4.60361 2.32384C4.60361 3.41873 3.74084 4.30734 2.67778 4.30734C1.61472 4.30734 0.751953 3.41873 0.751953 2.32384C0.751953 1.22894 1.61472 0.340332 2.67778 0.340332C3.74084 0.340332 4.60361 1.22894 4.60361 2.32384Z"
+              fill="#FF9700" />
           </svg>
         </div>
-        <div class="policy" style="color: #FF9700; font-size: 15px; font-family: Poppins; font-weight: 600; word-wrap: break-word">Privacy Policy               |              Terms and Condition     </div>
+        <div class="policy"
+          style="color: #FF9700; font-size: 15px; font-family: Poppins; font-weight: 600; word-wrap: break-word">Privacy
+          Policy | Terms and Condition </div>
       </div>
     </div>
     <div class="footer-menu">
       <div class="dcodeblock">
-        <div style="color: #FF9700; font-size: 14px; font-family: Poppins; font-weight: 600; text-transform: uppercase; line-height: 18px; letter-spacing: 1px; word-wrap: break-word">dcodeblock</div>
-        <div style="color: white; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 22px; word-wrap: break-word">About          <br/><br/>Features          <br/><br/>Works          <br/><br/>Career  </div>
+        <div
+          style="color: #FF9700; font-size: 14px; font-family: Poppins; font-weight: 600; text-transform: uppercase; line-height: 18px; letter-spacing: 1px; word-wrap: break-word">
+          dcodeblock</div>
+        <div
+          style="color: white; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 22px; word-wrap: break-word">
+          About <br /><br />Features <br /><br />Works <br /><br />Career </div>
       </div>
       <div class="help">
-        <div style="width: 100%; height: 100%; color: #FF9700; font-size: 14px; font-family: Poppins; font-weight: 600; text-transform: uppercase; line-height: 18px; letter-spacing: 1px; word-wrap: break-word">Help</div>
-        <div style="width: 100%; height: 100%"><span style="color: white; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 22px; word-wrap: break-word">Customer Support<br/></span><span style="color: #18181B; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 22px; word-wrap: break-word"><br/></span><span style="color: white; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 22px; word-wrap: break-word">Delivery Details<br/><br/>Terms & Conditions<br/><br/>Privacy Policy</span></div>
+        <div
+          style="width: 100%; height: 100%; color: #FF9700; font-size: 14px; font-family: Poppins; font-weight: 600; text-transform: uppercase; line-height: 18px; letter-spacing: 1px; word-wrap: break-word">
+          Help</div>
+        <div style="width: 100%; height: 100%"><span
+            style="color: white; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 22px; word-wrap: break-word">Customer
+            Support<br /></span><span
+            style="color: #18181B; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 22px; word-wrap: break-word"><br /></span><span
+            style="color: white; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 22px; word-wrap: break-word">Delivery
+            Details<br /><br />Terms & Conditions<br /><br />Privacy Policy</span></div>
       </div>
     </div>
   </div>
+
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.style.display = "block";
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.style.display = "none";
+    }
+  </script>
 </body>
-
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
 
 </html>
