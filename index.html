@@ -26,11 +26,16 @@
       <img src="logo.jpg" alt="Logo" />
       <div class="header">GyaanLab</div>
     </div>
+    <div class="phone">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+      <path fill="#0f0" d="M13,42h22c3.866,0,7-3.134,7-7V13c0-3.866-3.134-7-7-7H13c-3.866,0-7,3.134-7,7v22	C6,38.866,9.134,42,13,42z"></path><path fill="#fff" d="M35.45,31.041l-4.612-3.051c-0.563-0.341-1.267-0.347-1.836-0.017c0,0,0,0-1.978,1.153	c-0.265,0.154-0.52,0.183-0.726,0.145c-0.262-0.048-0.442-0.191-0.454-0.201c-1.087-0.797-2.357-1.852-3.711-3.205	c-1.353-1.353-2.408-2.623-3.205-3.711c-0.009-0.013-0.153-0.193-0.201-0.454c-0.037-0.206-0.009-0.46,0.145-0.726	c1.153-1.978,1.153-1.978,1.153-1.978c0.331-0.569,0.324-1.274-0.017-1.836l-3.051-4.612c-0.378-0.571-1.151-0.722-1.714-0.332	c0,0-1.445,0.989-1.922,1.325c-0.764,0.538-1.01,1.356-1.011,2.496c-0.002,1.604,1.38,6.629,7.201,12.45l0,0l0,0l0,0l0,0	c5.822,5.822,10.846,7.203,12.45,7.201c1.14-0.001,1.958-0.248,2.496-1.011c0.336-0.477,1.325-1.922,1.325-1.922	C36.172,32.192,36.022,31.419,35.45,31.041z"></path>
+      </svg>
+    </div>
     <div class="menubar">
-      <div class="menu-item home">Home</div>
-      <div class="menu-item courses">Courses</div>
-      <div class="menu-item EntranceExams">Entrance Exams</div>
-      <div class="menu-item about">About us</div>
+      <div class="menu-item home"><a href="#home">Home</a></div>
+      <div class="menu-item courses"><a href="#courses">Courses</a></div>
+      <div class="menu-item EntranceExams"><a href="#entranceexams">Entrance Exams</a></div>
+      <div class="menu-item about"><a href="#enquire">About us</a></div>
     </div>
     <div class="contact">
       <div class="contactus">Contact us:</div>
@@ -59,18 +64,18 @@
 
   <div class="sidebar">
     <div class="close" onclick="hideSidebar()">
-      <a href = "#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50"
-        style="fill:#FFFFFF;">
-        <path
-          d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z">
-        </path>
-      </svg>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50"
+          style="fill:#FFFFFF;">
+          <path
+            d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z">
+          </path>
+        </svg>
       </a>
     </div>
-    <div class="menu-item-sidebar home">Home</div>
-    <div class="menu-item-sidebar courses">Courses</div>
-    <div class="menu-item-sidebar EntranceExams">Entrance Exams</div>
-    <div class="menu-item-sidebar about">About us</div>
+    <div class="menu-item-sidebar home"><a href="#home">Home</a></div>
+    <div class="menu-item-sidebar courses"><a href="#aboutus">Courses</a></div>
+    <div class="menu-item-sidebar EntranceExams"><a href="#entranceexams">Entrance Exams</a></div>
+    <div class="menu-item-sidebar about"><a href="#enquire">About us</a></div>
     <div class="contact">
       <div class="contactus">Contact us:</div>
       <div class="phn">+91 9294792474</div>
@@ -90,7 +95,10 @@
   </div>
 
   </div>
-  <div class="title">
+  <div class="title" id="home">
+    <div class="image">
+      <img src="image1.jpg" alt="image" />
+    </div>
     <div class="intro">
       <div class="heading">
         <img src="logo.jpg" alt="Logo" />
@@ -99,13 +107,10 @@
       </div>
       <div class="sub-heading">Nurturing <br />Young Minds...</div>
       <div class="button2 button">
-        <button type="button" class="btn btn-primary sign-in">
+        <button type="button" class="btn btn-primary sign-in" onclick="redirectToEmail()">
           <b style="font-size: 15px" ;><i class="fa-solid fa-phone" style="margin-right: 5px"></i>Contact Us</b>
         </button>
       </div>
-    </div>
-    <div class="image">
-      <img src="image1.jpg" alt="image" />
     </div>
   </div>
   <div class="container">
@@ -114,7 +119,7 @@
     </div>
   </div>
   <div class="container2">
-    <div class="subContainer">
+    <div class="subContainer" id="entranceexams">
       <div style="
             width: 100%;
             height: 100%;
@@ -222,7 +227,7 @@
         </div>
       </div>
     </div>
-    <div class="subContainer2">
+    <div class="subContainer2" id="aboutus">
       <div class="image">
         <img src="Doubt.jpg" />
       </div>
@@ -323,7 +328,7 @@
           84848 49658<br />+91 85510 66450</span></div>
     </div>
   </div>
-  <div class="enquire">
+  <div class="enquire" id="enquire">
     <div class="box">
       <h1> Enquire Now </h1>
       <div
@@ -418,11 +423,79 @@
       const sidebar = document.querySelector(".sidebar");
       sidebar.style.display = "block";
     }
+
     function hideSidebar() {
       const sidebar = document.querySelector(".sidebar");
       sidebar.style.display = "none";
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.menu-item-sidebar a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            scrollToTarget(targetElement);
+          }
+        });
+      });
+    });
+
+    function scrollToTarget(targetElement) {
+      const startPosition = window.scrollY;
+      const targetPosition = targetElement.offsetTop;
+      const distance = targetPosition - startPosition;
+      const duration = 2000; // Increased duration to 2 seconds (2000 milliseconds)
+
+      let startTime;
+
+      function scrollAnimation(currentTime) {
+        if (!startTime) {
+          startTime = currentTime;
+        }
+
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = easeInOutQuad(progress);
+
+        window.scrollTo(0, startPosition + distance * ease);
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(scrollAnimation);
+        }
+      }
+
+      requestAnimationFrame(scrollAnimation);
+    }
+
+
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+
+    function redirectToEmail() {
+      // Change 'email@example.com' to your actual email address
+      var emailAddress = 'support@gyaanlab.com';
+
+      // Subject and body of the email
+      var subject = 'Inquiry';
+      var body = 'Hello, I would like to inquire about...';
+
+      // Create the mailto link
+      var mailtoLink = 'mailto:' + encodeURIComponent(emailAddress) +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      // Open the default email client
+      window.location.href = mailtoLink;
+    }
   </script>
+
+
+
 </body>
 
 </html>
